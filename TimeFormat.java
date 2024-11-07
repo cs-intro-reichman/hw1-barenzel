@@ -16,14 +16,14 @@ public class TimeFormat {
 
 	    if (minutes<10) {
 			String minutes1= "0"+minutes;
-		   if (hours<12) {
+		   if (hours<=12) {
 			   System.out.println(hours+":"+minutes1+" AM");
 		   } else {
 			   hours = hours-12;
 			   System.out.println(hours+":"+minutes1+" PM");  
 		   }
 		} else {
-			if (hours<12) {
+			if (hours<=12) {
 				System.out.println(hours+":"+minutes+" AM");
 			} else {
 				hours = hours-12;
