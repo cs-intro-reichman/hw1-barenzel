@@ -16,18 +16,22 @@ public class TimeFormat {
 
 	    if (minutes<10) {
 			String minutes1= "0"+minutes;
-		   if (hours<=12) {
+		   if (hours<12) {
 			   System.out.println(hours+":"+minutes1+" AM");
-		   } else {
+		   } else if (hours>12) {
 			   hours = hours-12;
 			   System.out.println(hours+":"+minutes1+" PM");  
+		   } else {
+			System.out.println(hours+":"+minutes1+" PM");
 		   }
 		} else {
-			if (hours<=12) {
+			if (hours<12) {
 				System.out.println(hours+":"+minutes+" AM");
-			} else {
+			} else if (hours>12) {
 				hours = hours-12;
 				System.out.println(hours+":"+minutes+" PM");  
+			} else {
+			 System.out.println(hours+":"+minutes+" PM");
 			}
 		}
 	
